@@ -15,8 +15,38 @@ Aquí hay algunas características clave de DAX:
 
 DAX proporciona una gran flexibilidad y potencia para realizar cálculos avanzados en tus modelos de datos. A medida que te familiarices con el lenguaje y sus funciones, podrás crear análisis más sofisticados, realizar cálculos personalizados y aprovechar al máximo las capacidades de Power Pivot y Power BI.
 
+## Sintaxis
 
-## Ejemplo 1
+La sintaxis en DAX tiene varias partes que te ayudarán a construir tus fórmulas. Aquí tienes una descripción de algunas de las partes más comunes en la sintaxis de DAX:
+
+1. **Referencias a columnas y tablas:** En DAX, puedes hacer referencia a las columnas y tablas en tu modelo de datos utilizando la siguiente sintaxis:
+   - Referencia a una columna: `[Nombre de la Tabla][Nombre de la Columna]`
+   - Referencia a una tabla: `[Nombre de la Tabla]`
+
+2. **Operadores aritméticos y lógicos:** Puedes utilizar operadores aritméticos y lógicos para realizar cálculos y evaluaciones en tus fórmulas DAX. Algunos ejemplos comunes son:
+   - Suma: `+`
+   - Resta: `-`
+   - Multiplicación: `*`
+   - División: `/`
+   - Igualdad: `=`
+   - Mayor que: `>`
+   - Menor que: `<`
+   - Y lógico: `&&`
+   - O lógico: `||`
+
+3. **Funciones DAX:** DAX proporciona una amplia gama de funciones predefinidas que puedes utilizar en tus fórmulas. Las funciones DAX siguen la siguiente sintaxis general:
+   - `NOMBRE_DE_LA_FUNCION(argumento1, argumento2, ...)`
+
+4. **Variables y asignaciones:** En DAX, puedes utilizar variables para almacenar valores intermedios y simplificar tus fórmulas. La sintaxis para declarar una variable en DAX es la siguiente:
+   - `VAR nombre_variable = expresión`
+
+5. **Funciones personalizadas:** Puedes crear tus propias funciones personalizadas en DAX utilizando la sintaxis `DEFINE FUNCTION`. Sin embargo, ten en cuenta que las funciones personalizadas solo están disponibles en ciertas herramientas de análisis de datos de Microsoft, como Power BI y Analysis Services Tabular.
+
+Es importante tener en cuenta que la sintaxis exacta de DAX puede variar dependiendo de la herramienta que estés utilizando, como Power Pivot, Power BI o Analysis Services Tabular. Además, algunos conceptos avanzados, como las tablas dinámicas y los contextos de filtro, requieren un entendimiento más profundo de DAX.
+
+Te recomendaría consultar la documentación oficial de Microsoft o recursos en línea para obtener una referencia completa de la sintaxis y las funciones disponibles en DAX, así como ejemplos prácticos de uso.
+
+### Ejemplo 1
 
 Supongamos que tenemos una base de datos de ventas con las siguientes tablas: "Ventas" y "Productos". La tabla "Ventas" contiene información sobre las ventas realizadas, incluyendo el producto vendido y la cantidad vendida. La tabla "Productos" contiene información detallada sobre cada producto, incluyendo su precio unitario.
 
@@ -43,7 +73,7 @@ Precio Total = SUMX(Ventas, Ventas[Cantidad] * RELATED(Productos[Precio]))
 
 Estos son solo ejemplos básicos de cómo utilizar fórmulas DAX en Power Pivot. Puedes combinar funciones, aplicar filtros contextuales y realizar cálculos más complejos según tus necesidades y la estructura de tus datos.
 
-## Ejemplo 2
+### Ejemplo 2
 
 1. **Calcular el total de ventas por categoría de producto:**
 Supongamos que en nuestra base de datos tenemos una tabla adicional llamada "Categorías" que contiene información sobre las categorías de productos. Queremos calcular el total de ventas por categoría de producto.
